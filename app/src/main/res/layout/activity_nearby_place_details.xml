@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.NearbyPlaceDetailsActivity"
+    android:background="#fafafa">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:scaleType="centerCrop">
+
+        </ImageView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/card"
+            android:layout_width="match_parent"
+            android:layout_marginTop="-24dp"
+            android:layout_marginHorizontal="15dp"
+            app:strokeColor="@android:color/darker_gray"
+            app:strokeWidth=".2dp"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="16dp">
+                <TextView
+                    android:id="@+id/title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18dp"
+                    android:text="title"
+                    android:textColor="@color/black"
+                    >
+
+                </TextView>
+
+                <TextView
+                    android:id="@+id/province_district"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14dp"
+                    android:text=""
+                    android:gravity="right">
+
+                </TextView>
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Common Features -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            app:strokeColor="#dddddd"
+            app:strokeWidth="0.2dp"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="14dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                    android:text="@string/common_features"
+                    android:textSize="15dp"
+                    android:layout_marginBottom="5dp">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_outline_wifi_24"
+                    android:id="@+id/has_internet_connection"
+                    android:gravity="center"
+                    android:drawablePadding="5dp"
+                    android:text="@string/has_internet_connection">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/has_virus_precautions"
+                    android:drawableLeft="@drawable/ic_outline_coronavirus_24"
+                    android:gravity="center"
+                    android:drawablePadding="5dp"
+                    android:text="@string/has_virus_precautions">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/work_times"
+                    android:drawableLeft="@drawable/ic_baseline_access_time_24"
+                    android:gravity="center"
+                    android:drawablePadding="5dp"
+                    android:text="09:00 - 21:00">
+
+                </TextView>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- End of Common Features -->
+
+        <!-- Restaurant Features -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/restaurant_features"
+            android:layout_width="match_parent"
+            android:visibility="gone"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            app:strokeColor="#dddddd"
+            app:strokeWidth="0.2dp"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="14dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                    android:text="@string/restaurant_features"
+                    android:textSize="15dp"
+                    android:layout_marginBottom="5dp">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_outline_family_restroom_24"
+                    android:gravity="center"
+                    android:id="@+id/has_family_lounge"
+                    android:drawablePadding="5dp"
+                    android:text="@string/has_family_lounge">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_outline_liquor_24"
+                    android:gravity="center"
+                    android:id="@+id/serve_alcohol"
+                    android:drawablePadding="5dp"
+                    android:text="@string/serve_alcohol">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_outline_local_dining_24"
+                    android:gravity="center"
+                    android:drawablePadding="5dp"
+                    android:id="@+id/has_local_food"
+                    android:text="@string/has_local_food">
+
+                </TextView>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- End of Restaurant Features -->
+
+        <!-- Hotel Features -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/hotel_features"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15dp"
+            android:visibility="gone"
+            app:strokeColor="#dddddd"
+            app:strokeWidth="0.2dp"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="14dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/TextAppearance.MaterialComponents.Subtitle1"
+                    android:text="@string/hotel_features"
+                    android:textSize="15dp"
+                    android:layout_marginBottom="5dp">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_baseline_star_24_m"
+                    android:gravity="center"
+                    android:id="@+id/star_count"
+                    android:drawablePadding="5dp"
+                    android:text="5 Yıldız">
+
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_baseline_pets_24"
+                    android:gravity="center"
+                    android:id="@+id/pets_allowed"
+                    android:drawablePadding="5dp"
+                    android:text="@string/pets_allowed">
+
+                </TextView>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- End of Hotel Features -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_marginHorizontal="15dp">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#e39210"
+                android:id="@+id/comments"
+                android:drawableLeft="@drawable/ic_baseline_mode_comment_24"
+                android:text="@string/comments"
+                android:textAllCaps="false"
+                android:letterSpacing="0">
+
+            </Button>
+
+            <Button
+                android:id="@+id/launch_maps"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="@string/get_directions"
+                android:textAllCaps="false"
+                android:letterSpacing="0"
+                android:drawableLeft="@drawable/ic_baseline_directions_24">
+
+
+            </Button>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

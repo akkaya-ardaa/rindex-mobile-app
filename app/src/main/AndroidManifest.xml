@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.levent.rindex">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <permission
+        android:name="com.levent.rindex.activities.MainActivity.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECIEVE" />
+
+    <application
+        android:allowBackup="true"
+        android:debuggable="true"
+        android:icon="@drawable/rindexlogo"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Rindex.NoActionBar"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".activities.NearbyPlaceDetailsActivity"></activity>
+        <activity android:name=".activities.NearbyPlaceCommentsActivity" />
+        <activity android:name=".activities.NearbyPlacesListActivity" />
+        <activity android:name=".activities.LocationGuesserActivity" />
+        <activity android:name=".activities.LiveChatListActivity" />
+        <activity android:name=".activities.UserQuestionsActivity" />
+        <activity android:name=".activities.QuestionsActivity" />
+        <activity android:name=".activities.UserPostsActivity" />
+        <activity android:name=".activities.UserCommentsActivity" />
+        <activity android:name=".activities.PlaceCommentsActivity" />
+        <activity
+            android:name=".activities.PlaceDetailsActivity"
+            android:label="@string/title_activity_place_details"
+            android:theme="@style/Theme.Rindex.NoActionBar.NoActionBar" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/map_key" />
+
+        <activity android:name=".activities.SearchActivity" />
+        <activity android:name=".activities.AnswersActivity" />
+        <activity
+            android:name=".activities.MainActivity"
+            android:theme="@style/Theme.Rindex.NoActionBar" />
+        <activity android:name=".activities.LoginActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+
+        <service
+            android:name=".services.NotifyService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".services.BackgroundLocationService"
+            android:enabled="true"
+            android:exported="false" />
+    </application>
+
+</manifest>

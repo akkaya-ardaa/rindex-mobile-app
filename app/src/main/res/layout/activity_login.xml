@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="15dp"
+        android:gravity="center|center_vertical"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="15dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/pacifico"
+            android:text="Rindex"
+            android:textColor="@color/white"
+            android:textSize="36sp"></TextView>
+
+        <EditText
+            android:id="@+id/usermail"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/login_input"
+            android:drawableStart="@drawable/ic_baseline_person_24"
+            android:drawablePadding="12dp"
+            android:ems="10"
+            android:hint="@string/hint_mail"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/userpass"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/login_input"
+            android:drawableStart="@drawable/ic_baseline_https_24"
+            android:drawablePadding="12dp"
+            android:ems="10"
+            android:hint="@string/hint_password"
+            android:inputType="textPassword"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="5dp"
+            android:backgroundTint="#333"
+            android:letterSpacing="0.001"
+            android:text="@string/login"
+            android:textAllCaps="false" />
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:gravity="center"
+            android:text="@string/not_a_member"
+            android:textColor="@color/white"></TextView>
+
+        <Button
+            android:id="@+id/register"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+
+            android:backgroundTint="#333"
+            android:letterSpacing="0.001"
+            android:text="@string/register"
+            android:textAllCaps="false" />
+
+        <Button
+            android:id="@+id/bypassLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#A63C3C"
+            android:letterSpacing="0"
+            android:text="@string/bypass_login" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.profile.ProfileFragment"
+    android:background="#fafafa">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/profile_photo"
+                        android:layout_width="140px"
+                        android:layout_height="140px"
+                        android:foreground="@drawable/profile_photo_view"
+                        android:layout_gravity="center"
+                        android:scaleType="centerCrop"
+                        android:layout_marginLeft="10dp">
+
+                    </ImageView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="14dp">
+
+                        <TextView
+                            android:id="@+id/name_surname"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Name Surname"
+                            android:textSize="16dp"
+                            android:textColor="#1f1f1f">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/username"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Username"
+                            android:layout_marginTop="5dp"
+                            android:textColor="#555">
+
+                        </TextView>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:background="#dddddd">
+
+                </View>
+
+                <TextView
+                    android:id="@+id/biography"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="12dp"
+                    android:textColor="#555"></TextView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.3dp"
+                    android:background="#eeeeee"
+                    >
+
+                </View>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:id="@+id/comments_card"
+                    android:focusable="true"
+                    android:clickable="true"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="0dp"
+                    app:strokeColor="@android:color/transparent"
+                    app:strokeWidth="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="14dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/comments"
+                            android:textSize="16dp"
+                            android:textColor="#1f1f1f">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/comments_count"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:textColor="#555">
+
+                        </TextView>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:id="@+id/posts_card"
+                    app:cardCornerRadius="0dp"
+                    app:strokeColor="@android:color/transparent"
+                    app:strokeWidth="0dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="14dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/posts"
+                            android:textSize="16dp"
+                            android:textColor="#1f1f1f">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/posts_count"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:textColor="#555">
+
+                        </TextView>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:id="@+id/questions_card"
+                    app:cardCornerRadius="0dp"
+                    app:strokeColor="@android:color/transparent"
+                    app:strokeWidth="0dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="14dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/questions"
+                            android:textSize="16dp"
+                            android:textColor="#1f1f1f">
+
+                        </TextView>
+
+                        <TextView
+                            android:id="@+id/questions_count"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:textColor="#555">
+
+                        </TextView>
+
+                    </LinearLayout>
+
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <Button
+            android:id="@+id/edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp"
+            android:textAllCaps="false"
+            android:letterSpacing="0"
+            android:drawableLeft="@drawable/ic_baseline_edit_24"
+            android:text="@string/edit">
+
+        </Button>
+
+    </LinearLayout>
+
+</FrameLayout>
